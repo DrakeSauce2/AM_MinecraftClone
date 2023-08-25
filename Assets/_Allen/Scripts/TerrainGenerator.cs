@@ -11,6 +11,7 @@ public class TerrainGenerator : MonoBehaviour
     int seed;
 
     public List<GameObject> blocks = new List<GameObject>();
+    public GameObject player;
 
     private void Start()
     {
@@ -39,17 +40,11 @@ public class TerrainGenerator : MonoBehaviour
                         GameObject stone = Instantiate(blocks[2], new Vector3(x, y, z), Quaternion.identity) as GameObject;
                         stone.transform.SetParent(GameObject.FindGameObjectWithTag("Environment").transform);
                     }
+                }
 
-                    /*
-                     
-                    if (x == (int)(sizeX / 2) && z == (int)(sizeZ / 2))
-                    {
-                        Instantiate(player, new Vector3(x, maxY + 3, z), Quaternion.identity);
-                    }
-
-                    */
-                    
-
+                if (x == (int)(sizeX / 2) && z == (int)(sizeZ / 2))
+                {
+                    Instantiate(player, new Vector3(x, maxY + 3, z), Quaternion.identity);
                 }
 
             }
