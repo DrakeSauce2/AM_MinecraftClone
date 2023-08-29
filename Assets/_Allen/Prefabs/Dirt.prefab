@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8156721773588057140}
   m_Layer: 6
   m_Name: Dirt
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,6 +64,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 0c0e9b1d319bc7e439527efae2d1aecc, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -119,3 +120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayTime: 1
+  highlightMat: {fileID: 2100000, guid: a9ca4d57d1ac6274a952be9bc9b6c285, type: 2}

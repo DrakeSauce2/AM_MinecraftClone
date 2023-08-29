@@ -8,6 +8,10 @@ public class PlayerScript : MonoBehaviour
 
     [SerializeField] Movement movement;
     [SerializeField] MouseLook mouseLook;
+    [Space]
+    [SerializeField] private float hitRange;
+
+    private Transform highlight;
 
     PlayerController controls;
     PlayerController.PlayerActions playerInput;
@@ -33,6 +37,43 @@ public class PlayerScript : MonoBehaviour
     {
         movement.ReceiveInput(horizontalInput);
         mouseLook.ReceiveInput(mouseInput);
+
+        GetLookObj();
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Hit();
+        }
+
+    }
+
+    private void Hit()
+    {
+        if (GetLookObj())
+            Destroy(GetLookObj());
+    }
+  
+    private GameObject GetLookObj()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2, 0));
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit, hitRange))
+        {
+            if (hit.transform.CompareTag("Block"))
+            {
+                hit.transform.gameObject.GetComponent<OcclusionObject>().Select();
+
+                return hit.transform.gameObject;
+            }
+            else
+            {
+                hit.transform.gameObject.GetComponent<OcclusionObject>().Deselect();
+                highlight = null;
+                return null;
+            }
+        }
+        else return null;
     }
 
     private void OnEnable()

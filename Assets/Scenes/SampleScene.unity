@@ -833,8 +833,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sizeX: 128
   sizeZ: 128
-  terrainDetail: 20
-  terrainHeight: 3
+  terrainDetail: 2
+  terrainHeight: 8
   blocks:
   - {fileID: 559335241944901937, guid: e4566795fa826564187aa74345b6303a, type: 3}
   - {fileID: 559335241944901937, guid: 42bc08d2dcd842f49976e8c6a77c9cdb, type: 3}

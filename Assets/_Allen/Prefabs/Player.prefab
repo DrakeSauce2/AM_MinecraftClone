@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6406031297244686022}
   - component: {fileID: 9077212656310848596}
   - component: {fileID: 3801819200195030499}
-  - component: {fileID: 6288233418289186922}
   - component: {fileID: 1949320472956803923}
   - component: {fileID: 1304388905131231677}
   - component: {fileID: 3114254896979200245}
@@ -90,29 +89,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6288233418289186922
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2557288394317076172}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1949320472956803923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 3114254896979200245}
   mouseLook: {fileID: -9070626529778956891}
+  hitRange: 3
 --- !u!114 &1304388905131231677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,9 +134,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 5327706449088661936}
-  speed: 5
-  jumpHeight: 1.5
-  gravity: -10
+  speed: 4
+  jumpHeight: 1.35
+  gravity: -25
   groundMask:
     serializedVersion: 2
     m_Bits: 64
@@ -198,13 +175,13 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 1.7
+  m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -0.15, z: 0}
 --- !u!1 &3113828133964589574
 GameObject:
   m_ObjectHideFlags: 0

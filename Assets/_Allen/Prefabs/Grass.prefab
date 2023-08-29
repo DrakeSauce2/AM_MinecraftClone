@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8013294629423621519}
   m_Layer: 6
   m_Name: Grass
-  m_TagString: Untagged
+  m_TagString: Block
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -63,6 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
+  - {fileID: 2100000, guid: a7f7def1f8102454ca336f053cd0276d, type: 2}
   - {fileID: 2100000, guid: a7f7def1f8102454ca336f053cd0276d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -119,3 +120,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayTime: 1
+  highlightMat: {fileID: 2100000, guid: a9ca4d57d1ac6274a952be9bc9b6c285, type: 2}
