@@ -11,7 +11,7 @@ public class PlayerScript : MonoBehaviour
     [Space]
     [SerializeField] private float hitRange;
 
-    private Transform highlight;
+    //private Transform highlight;
 
     PlayerController controls;
     PlayerController.PlayerActions playerInput;
@@ -69,7 +69,7 @@ public class PlayerScript : MonoBehaviour
             else
             {
                 hit.transform.gameObject.GetComponent<OcclusionObject>().Deselect();
-                highlight = null;
+                //highlight = null;
                 return null;
             }
         }

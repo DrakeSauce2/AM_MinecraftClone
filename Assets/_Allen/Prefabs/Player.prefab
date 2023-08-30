@@ -116,11 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70e6512ac6050b24892fe35b2dfacd70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayAmount: 10000
-  rayDistance: 1500
-  stayTime: 2
   cam: {fileID: 6407328855062557988}
-  rPoints: []
 --- !u!114 &3114254896979200245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +245,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
   orthographic: 0
   orthographic size: 5

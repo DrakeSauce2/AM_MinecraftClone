@@ -10,27 +10,36 @@ public class OcclusionObject : MonoBehaviour
     public float displayTime;
     public Material highlightMat;
 
-    private bool isHighlighted = false;
+    private Camera cam;
+    private Renderer renderer;
+    private Plane[] cameraFrustum;
+    private Collider collider;
 
-    private void OnEnable()
+    private void Start()
     {
         myRend = gameObject.GetComponent<Renderer>();
         meshRend = gameObject.GetComponent<MeshRenderer>();
+
+        cam = Camera.main;
+        renderer = GetComponent<Renderer>();
+        collider = GetComponent<Collider>();
+
         displayTime = -1;
     }
 
-    private void Update()
+    private void OnBecameInvisible()
     {
-        if (displayTime > 0)
+        myRend.enabled = false;
+    }
+
+    private void ObjectInView()
+    {
+        var bounds = collider.bounds;
+        cameraFrustum = GeometryUtility.CalculateFrustumPlanes(cam);
+        if (GeometryUtility.TestPlanesAABB(cameraFrustum, bounds))
         {
-            displayTime -= Time.deltaTime;
-            myRend.enabled = true;
-        } else {
-            myRend.enabled = false;
+            renderer.enabled = true;
         }
-
-        
-
     }
 
     public void Select() => meshRend.materials[1] = highlightMat;
