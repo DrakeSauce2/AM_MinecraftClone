@@ -831,8 +831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43cd728790e8744f834cbf70546a8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizeX: 64
-  sizeZ: 64
+  sizeX: 128
+  sizeZ: 128
   terrainDetail: 20
   terrainHeight: 32
   blocks:

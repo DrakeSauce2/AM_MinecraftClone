@@ -27,11 +27,12 @@ public class OcclusionObject : MonoBehaviour
         displayTime = -1;
     }
 
+    /*
     private void OnBecameInvisible()
     {
         myRend.enabled = false;
     }
-
+    */
     private void ObjectInView()
     {
         var bounds = collider.bounds;
