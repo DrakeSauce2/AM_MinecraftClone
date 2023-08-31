@@ -8,7 +8,11 @@ public class OcclusionScript : MonoBehaviour
 
     private void Start()
     {
-        
+        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(cam); 
+        foreach (Plane plane in planes)
+        {
+            //Instantiate(plane, Vector3.zero, Quaternion.identity);
+        }
     }
 
     private void Update()

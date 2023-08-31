@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a4f3c7f220ee8b4896f6058735657da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivityX: 10
+  sensitivityX: 26
   sensitivityY: 1
   playerCamera: {fileID: 7655325135927448189}
   xClamp: 85

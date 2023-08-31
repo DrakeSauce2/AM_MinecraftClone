@@ -62,13 +62,13 @@ public class PlayerScript : MonoBehaviour
         {
             if (hit.transform.CompareTag("Block"))
             {
-                hit.transform.gameObject.GetComponent<OcclusionObject>().Select();
+                //hit.transform.gameObject.GetComponent<OcclusionObject>().Select();
 
                 return hit.transform.gameObject;
             }
             else
             {
-                hit.transform.gameObject.GetComponent<OcclusionObject>().Deselect();
+                //hit.transform.gameObject.GetComponent<OcclusionObject>().Deselect();
                 //highlight = null;
                 return null;
             }
