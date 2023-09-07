@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensitivityX: 26
-  sensitivityY: 1
+  sensitivityY: 2
   playerCamera: {fileID: 7655325135927448189}
   xClamp: 85
 --- !u!143 &5327706449088661936
