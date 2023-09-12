@@ -13,21 +13,28 @@ MonoBehaviour:
   m_Name: Grassland
   m_EditorClassIdentifier: 
   biomeName: Grassland
-  solidGroundHeight: 22
-  terrainHeight: 12
-  terrainScale: 0.5
+  solidGroundHeight: 42
+  terrainHeight: 42
+  terrainScale: 0.25
   lodes:
-  - nodeName: Dirt
-    blockID: 4
-    minHeight: 1
-    maxHeight: 255
-    scale: 0.1
-    threshold: 0.5
-    noiseOffset: 0
-  - nodeName: Sand
-    blockID: 5
+  - nodeName: Stone
+    blockID: 3
     minHeight: 30
     maxHeight: 60
     scale: 0.2
     threshold: 0.6
     noiseOffset: 500
+  - nodeName: Grass
+    blockID: 5
+    minHeight: 1
+    maxHeight: 255
+    scale: 0.1
+    threshold: 0.5
+    noiseOffset: 0
+  - nodeName: Air
+    blockID: 0
+    minHeight: 1
+    maxHeight: 60
+    scale: 0.05
+    threshold: 0.5
+    noiseOffset: 6000
