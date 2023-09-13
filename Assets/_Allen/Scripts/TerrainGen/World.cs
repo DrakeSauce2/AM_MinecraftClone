@@ -107,6 +107,13 @@ public class World : MonoBehaviour
 
     }
 
+    public Chunk GetChunkFromVector3(Vector3 pos)
+    {
+        int x = Mathf.FloorToInt(pos.x / VoxelData.ChunkWidth);
+        int z = Mathf.FloorToInt(pos.z / VoxelData.ChunkWidth);
+        return chunks[x, z];
+    }
+
     void CheckViewDistance()
     {
 
