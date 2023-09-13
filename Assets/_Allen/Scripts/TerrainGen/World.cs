@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class World : MonoBehaviour
 {
+    public static World Instance;
 
     public int seed;
     public BiomeAttributes biome;
@@ -24,6 +25,12 @@ public class World : MonoBehaviour
     private bool isCreatingChunks;
 
     public GameObject debugScreen;
+
+    private void Awake()
+    {
+        if(Instance == null) Instance = this;
+        else Destroy(Instance);
+    }
 
     private void Start()
     {
