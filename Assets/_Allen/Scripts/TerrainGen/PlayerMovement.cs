@@ -57,13 +57,14 @@ public class Player : MonoBehaviour
         if (jumpRequest)
             Jump();
 
-        transform.Rotate(Vector3.up * mouseHorizontal * mouseSense);
+        transform.Rotate(Vector3.up * mouseHorizontal * mouseSense * Time.deltaTime);
+        cam.Rotate(Vector3.right * -mouseVertical * mouseSense * Time.deltaTime);
 
+        if (cam.transform.localRotation.x > 90)
+            cam.transform.rotation = new Quaternion(90, cam.transform.rotation.y, cam.transform.rotation.z, cam.transform.rotation.w);
+        if (cam.transform.localRotation.x < -90)
+            cam.transform.rotation = new Quaternion(-90, cam.transform.rotation.y, cam.transform.rotation.z, cam.transform.rotation.w);
 
-        cam.Rotate(Vector3.right * -mouseVertical * mouseSense);
-        Mathf.Clamp(cam.transform.rotation.x, -90, 90);
-
-        //Mathf.Clamp(cam.transform.rotation.y, -90, 90);
 
         transform.Translate(velocity, Space.World);
 
@@ -171,8 +172,8 @@ public class Player : MonoBehaviour
 
             if (world.CheckForVoxel(pos))
             {
-                highlightBlock.position = new Vector3(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.y), Mathf.FloorToInt(pos.z));
-                placeBlock.position = lastPos;
+                highlightBlock.localPosition = new Vector3(Mathf.FloorToInt(pos.x), Mathf.FloorToInt(pos.y), Mathf.FloorToInt(pos.z));
+                placeBlock.localPosition = lastPos;
 
                 highlightBlock.gameObject.SetActive(true);
                 placeBlock.gameObject.SetActive(true);
