@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Player : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 
     public bool isGrounded;
@@ -130,6 +130,11 @@ public class Player : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
                 world.GetChunkFromVector3(placeBlock.position).EditVoxel(placeBlock.position, selectedBlockIndex);
 
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
 
     }

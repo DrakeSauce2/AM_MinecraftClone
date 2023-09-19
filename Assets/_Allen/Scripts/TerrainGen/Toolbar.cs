@@ -7,7 +7,7 @@ public class Toolbar : MonoBehaviour
 {
 
     World world;
-    public Player player;
+    public PlayerMovement player;
 
     public RectTransform highlight;
     public ItemSlot[] itemSlots;
